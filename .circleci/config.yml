@@ -30,8 +30,8 @@ jobs: # a collection of steps
         wget "https://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip"
         # Unzip it
         unzip BrowserStackLocal-linux-x64.zip
-      # Run the file with user's access key
-      ./BrowserStackLocal LqF3zpn1qQzG95ffrTAp
+        # Run the file with user's access key
+        ./BrowserStackLocal P4JKysg5WuchQxBfKQu1
       
       - run: mvn test -P local # run the actual tests
       
