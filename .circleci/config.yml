@@ -18,11 +18,7 @@ jobs:
             - ~/.m2
           key: 'CircleCI-{{ checksum "pom.xml" }}'
       -
-        run:
-          name: 'Download BrowserStack Local binary and start it.'
-          command: "wget \"https://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip\"\nunzip BrowserStackLocal-linux-x64.zip\n./BrowserStackLocal P4JKysg5WuchQxBfKQu1 --daemon start\n"
-      -
-        run: 'mvn test -P parallel'
+        run: 'mvn test -P single'
       -
         store_test_results:
           path: target/surefire-reports
